@@ -69,8 +69,8 @@ Artifact，不发版）；也可以在 Actions 页手动触发。
 - 基线是完整 GeoLite2-City，只叠加纯真的大陆记录；港澳台永远留在
   GeoLite2 一侧。
 - 两边城市不一致 → 纯真胜出，记入 `conflicts.csv`（35,781 行）。
-- 纯真只有省 → 只写国家 + 省，城市留空，不回填 GeoLite2 的旧城市
-  （代价见已知问题 1）。
+- 纯真只有省 → 只写国家 + 省，城市留空，不回填 GeoLite2 的旧城市；
+  这些访客只显示到省。
 - IPv6 只补空缺：GeoLite2 已有省或市的网段一律不动；GeoCN 为主、
   ipdb 补省。
 - RIR 守卫：只叠加 APNIC 登记为 CN 的网段，拦住纯真把外国地址标
@@ -83,5 +83,6 @@ Artifact，不发版）；也可以在 Actions 页手动触发。
 - `GeoLite2-City-CN.mmdb` / `conflicts.csv` / `SHA256SUMS` — 成品
   （Release 附件，不进 git）
 - `build/` — 构建脚本（`build.sh`、`Dockerfile`、`merge_qqwry.py`、
-  `merge_ipv6.py`、`dbip_coords.py`、`cmd/*`、`SOURCES.sha256`）
+  `merge_ipv6.py`、`dbip_coords.py`、`cmd/*`、`SOURCES.sha256`、
+  `prefecture_cities.json`、`division_cities.json`）
 - `work/` — 验证脚本与样本
