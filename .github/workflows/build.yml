@@ -1,4 +1,4 @@
-# Weekly rebuild of GeoLite2-City-CN.mmdb.
+# Monthly rebuild of GeoLite2-City-CN.mmdb.
 #
 # The build is fully self-contained: build.sh downloads every source
 # (GeoLite2, metowolf qqwry.dat / qqwry.ipdb, GeoCN, DB-IP, APNIC),
@@ -34,7 +34,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: actions/setup-go@v5
         with:
@@ -44,9 +44,9 @@ jobs:
         with:
           python-version: '3.12'
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install Python dependencies
         run: pip install "pypinyin==0.55.0" "maxminddb==3.2.0"
@@ -55,7 +55,7 @@ jobs:
         run: bash build/build.sh
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: GeoLite2-City-CN
           path: |
@@ -73,5 +73,5 @@ jobs:
           TAG="build-$(date -u +%Y%m%d)"
           gh release create "$TAG" \
             --title "GeoLite2-City-CN $TAG" \
-            --notes "Weekly rebuild. See README.md for sources, verification results and known defects." \
+            --notes "Monthly rebuild. See README.md for sources and merge rules." \
             GeoLite2-City-CN.mmdb conflicts.csv README.md SHA256SUMS
