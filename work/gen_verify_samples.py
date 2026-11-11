@@ -14,13 +14,23 @@ Outputs work/verify_samples.json:
 import json
 import random
 import sys
+from pathlib import Path
 
 import ipaddress
 
 random.seed(20261111)
-ROOT = "/home/hatch/workspace/umami-geo-cn"
-QQWRY_TSV = f"{ROOT}/work/qqwry_fw.tsv"
-GEOLITE_CSV = f"{ROOT}/work/geolite_networks.csv"
+# Repo root, derived from this file's location — never a hardcoded
+# developer-machine path. (The old absolute /home/hatch/... path broke
+# CI, where the checkout lives under /home/runner/work/....)
+ROOT = Path(__file__).resolve().parent.parent
+# Mainland samples come from data/qqwry.dat itself, parsed with the same
+# parser the merge step uses — not from a local research TSV dump that is
+# gitignored and never reaches CI.
+sys.path.insert(0, str(ROOT / "build"))
+from merge_qqwry import parse_qqwry
+
+QQWRY_DAT = ROOT / "data" / "qqwry.dat"
+GEOLITE_CSV = ROOT / "work" / "geolite_networks.csv"
 
 
 def rand_ip_in(start, end):
@@ -30,21 +40,16 @@ def rand_ip_in(start, end):
 def main():
     # ---- mainland: stratified by ISP area field
     buckets = {"移动": [], "联通": [], "电信": []}
-    with open(QQWRY_TSV) as f:
-        for line in f:
-            parts = line.rstrip("\n").split("\t")
-            if len(parts) < 4:
-                continue
-            start, end, country, area = int(parts[0]), int(parts[1]), parts[2], parts[3]
-            if not country.startswith("中国–") or "–" not in country[3:]:
-                continue  # province-only record (no city part)
-            city_part = country.split("–")[2] if country.count("–") >= 2 else ""
-            if not city_part:
-                continue
-            for isp in buckets:
-                if isp in area:
-                    buckets[isp].append((start, end))
-                    break
+    for start, end, country, area in parse_qqwry(str(QQWRY_DAT)):
+        if not country.startswith("中国–") or "–" not in country[3:]:
+            continue  # province-only record (no city part)
+        city_part = country.split("–")[2] if country.count("–") >= 2 else ""
+        if not city_part:
+            continue
+        for isp in buckets:
+            if isp in area:
+                buckets[isp].append((start, end))
+                break
     mainland = []
     for isp, recs in buckets.items():
         random.shuffle(recs)
