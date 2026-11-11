@@ -7,14 +7,15 @@
 #
 # - push to main (build scripts changed): build + upload artifact only,
 #   to validate the change.
-# - weekly schedule / manual dispatch: build + publish a dated release
+# - monthly schedule / manual dispatch: build + publish a dated release
 #   with the mmdb, conflicts.csv, README.md and SHA256SUMS.
 name: Build GeoLite2-City-CN
 
 on:
   schedule:
-    # Monday 03:00 UTC — GeoLite2 and metowolf both refresh weekly.
-    - cron: '0 3 * * 1'
+    # 1st of each month 03:00 UTC — GeoLite2 and metowolf both refresh weekly,
+    # but a monthly rebuild keeps the data fresh enough at a lower cadence.
+    - cron: '0 3 1 * *'
   workflow_dispatch:
   push:
     branches: [main]
