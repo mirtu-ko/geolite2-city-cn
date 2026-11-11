@@ -1,0 +1,58 @@
+# Downloaded sources (fetched by build.sh, hash-checked)
+data/
+
+# Build outputs (published as release assets, not committed)
+GeoLite2-City-CN.mmdb
+conflicts.csv
+SHA256SUMS
+
+# Generated intermediates (the scripts in work/ are committed; data is not)
+work/geolite_cn.json
+work/geolite_networks.csv
+work/dbip_cn_coords.json
+work/merged_cidrs.jsonl
+work/merged_ipv6.jsonl
+work/merge_stats.json
+work/merge_ipv6_stats.json
+work/build_stats.json
+work/verify_samples.json
+work/verify_results.json
+work/ipv6_verify_results.json
+work/geocn_v6.tsv
+work/ipdb_v6.tsv
+work/*.log
+work/node_verify/node_modules/
+work/i2r/
+work/ipdb/
+
+# Local research scratch (not part of the build)
+work/analyse_cn.py
+work/analyse_qqwry.py
+work/check_baseline.py
+work/compare_files.py
+work/dump_qqwry.py
+work/ipv6_eval.py
+work/ipv6_geolite.json
+work/ipv6_dbip.json
+work/ipv6_i2r.txt
+work/ipv6_ipdb.txt
+work/build_mmdb.log
+work/build_sh_test.log
+work/build_v2.log
+work/build_v3.log
+
+# Local tooling
+.venv/
+build/extract_geolite
+build/build_mmdb
+build/extract_geocn
+build/walk_ipdb
+build/__pycache__/
+# Legacy pre-rename artifact (superseded by GeoLite2-City-CN.mmdb)
+City-CN-Merged.mmdb
+# Research spot-checks (not part of the build)
+work/qqwry_classic.tsv
+work/qqwry_fw.tsv
+work/spotcheck_i2r.txt
+work/spotcheck_ips.txt
+work/spotcheck_rows.json
