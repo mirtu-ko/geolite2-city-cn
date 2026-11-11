@@ -1,0 +1,76 @@
+# Weekly rebuild of GeoLite2-City-CN.mmdb.
+#
+# The build is fully self-contained: build.sh downloads every source
+# (GeoLite2, metowolf qqwry.dat / qqwry.ipdb, GeoCN, DB-IP, APNIC),
+# merges them, builds the mmdb and verifies it. No credentials, no
+# server access. Runs ~12 min and needs ~2 GB RAM on ubuntu-latest.
+#
+# - push to main (build scripts changed): build + upload artifact only,
+#   to validate the change.
+# - weekly schedule / manual dispatch: build + publish a dated release
+#   with the mmdb, conflicts.csv, README.md and SHA256SUMS.
+name: Build GeoLite2-City-CN
+
+on:
+  schedule:
+    # Monday 03:00 UTC — GeoLite2 and metowolf both refresh weekly.
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'build/**'
+      - 'work/gen_verify_samples.py'
+      - 'work/ipv6_verify.py'
+      - 'work/ipv6_samples.json'
+      - 'work/node_verify/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.25'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python dependencies
+        run: pip install "pypinyin==0.55.0" "maxminddb==3.2.0"
+
+      - name: Build
+        run: bash build/build.sh
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: GeoLite2-City-CN
+          path: |
+            GeoLite2-City-CN.mmdb
+            conflicts.csv
+            README.md
+            SHA256SUMS
+          retention-days: 90
+
+      - name: Publish release
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="build-$(date -u +%Y%m%d)"
+          gh release create "$TAG" \
+            --title "GeoLite2-City-CN $TAG" \
+            --notes "Weekly rebuild. See README.md for sources, verification results and known defects." \
+            GeoLite2-City-CN.mmdb conflicts.csv README.md SHA256SUMS
