@@ -1,0 +1,410 @@
+[
+ {
+  "ip": "2409:8a38:28:5a50:2cb3:d356:ea83:44c0",
+  "stratum": "spec"
+ },
+ {
+  "ip": "2409:8a4c:ecd:b00:1497:11ff:fec1:eedb",
+  "stratum": "spec"
+ },
+ {
+  "ip": "2408:8282:7551:7334:2813:85ab:586c:7b45",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:892e:c0d8:9bc6:2e79:6cc5:1c4c:289c",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:82e6:499c:baf6:dccf:fa07:2439:30e3",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:806a:14b7:44a5:bbd3:bc81:32fd:afb8",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:426e:402d:2f1a:3cca:2a63:a079:e844",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:8ea6:2a9a:f36e:2abc:85a2:33da:39f6",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:8b0d:c83e:6609:dcac:c133:caba:8507",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:8528:6713:2575:7314:2ed2:44eb:f707",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:8d53:10f7:5db9:b604:459c:b399:ee29",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:834f:7ff0:377f:5834:8a92:7201:a15",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:8e12:1de2:a6b0:4e06:1b7d:b616:5eb7",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:885a:f5d5:e6c:860f:ec82:e63a:7218",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:89b1:4621:3f26:d6db:532d:b74f:906c",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:823b:bed8:185e:f48d:be41:fedc:1225",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:8e4c:f5d3:d082:97b5:1bfe:9323:de3f",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:85e9:d52c:954c:d559:cb3b:44c1:668a",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:8e85:c67e:a639:ce0c:f537:399c:99ce",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:85fe:4150:cea5:abbd:fb98:4e95:ac29",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:8957:394f:e132:9bee:251c:3aa1:b413",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2408:8b5f:97d6:a9c9:387e:8325:75ac:1191",
+  "stratum": "unicom"
+ },
+ {
+  "ip": "2409:1bc8:7d20:82fd:2726:bc3f:5111:b698",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:6e16:fac3:1ee3:d91e:ebc0:aa65:d878",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:23c7:610:9bd3:3ecc:7ed4:a527:17fa",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:87ee:2b6f:402f:5d5a:391f:fd96:e88d",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:1a48:ea8d:d86c:f674:5a6a:1f0c:8f49",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:1184:3f7d:a2cc:af5d:1aa3:9e4:54a2",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:1bbf:e757:5eb1:ca88:1fc2:fd95:8cfd",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:6174:c4ae:3632:c5ed:3a3a:64ed:6499",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:8a85:a104:66db:8227:8505:162a:9697",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:85e6:35fc:eaf8:ccc6:63f2:3dfa:354f",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:892f:dd28:732d:fe29:8dde:eab2:927c",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:2384:bb3c:91af:997e:528c:ca70:130b",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:8793:b2d6:ee58:fd79:a903:b766:8739",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:6483:321a:3858:129e:1bab:9e5e:e6ea",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:62fa:b475:8e02:99ca:4604:aadf:73ca",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:6d4b:aa19:fa1d:dd68:57ca:5524:d776",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:61b1:b3e0:c23:7e27:d375:f8dc:4b14",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:8853:30e8:c85d:d26:8ab1:f324:cb75",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:6028:fdef:9255:f29e:b9fe:80cd:aefe",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "2409:6feb:251a:c2d7:9a4d:98a1:4be8:1fe8",
+  "stratum": "mobile"
+ },
+ {
+  "ip": "240e:711:7a88:577c:fc40:96c2:d9b0:6e6e",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:1fb1:e57:2bfc:79c0:6531:ea7b:1aae",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:3e0:558e:9296:2338:27a4:f44d:6493",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:ebe:fe3f:41c4:97c0:7f05:a6dc:8838",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:253c:4536:67f0:f219:80a1:a303:6d76",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:1933:69e2:7923:ceb0:3c11:f68:31f3",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:fdf:e497:4231:bbf4:4f57:8a52:ca3",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:2789:c83b:8d79:f3a3:5e2e:416:fa5c",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:1c5f:6258:a0c6:f2ad:b4cd:d6f3:3b94",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:dba:1c79:77:7872:60b3:b62e:39d3",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:299:6542:5ca2:87c0:89b6:7ff9:a126",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:153d:b22e:3604:910:d45e:1bbd:529e",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:3ce1:bce1:c4e1:15d:273c:9845:8819",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:30c:9f45:19:494:4162:4816:70c9",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:3845:dceb:bf83:5215:e699:256a:cab4",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:378e:55e6:ecc0:6fc1:164d:b7dc:f7d3",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:e5d:2b34:2ecb:a047:1105:2368:5dea",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:3b08:2c66:79e5:f99d:af1b:d887:76cc",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:26e1:b319:a6ac:f8b4:6245:404a:5983",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "240e:253c:37e0:47b7:f9b2:4149:1fdf:e1ac",
+  "stratum": "telecom"
+ },
+ {
+  "ip": "2409:8685:fd1f:a905:aaac:e581:b187:ca85",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240a:a137:704:d3c7:d150:5ad7:2c7c:714b",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240a:8729:6ff3:3d4f:6562:f0e5:b6ca:b913",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240a:a019:5567:82a9:42ec:c270:bfd5:c3da",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240a:823a:15c4:edcd:f60e:646b:7fb:ff5d",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240a:8459:ee16:e6e5:4bc2:f829:9529:9d54",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240c:40e6:239c:cccb:a3:7241:7730:70ff",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240c:c39a:38f:e61d:32ad:bd7e:3af7:b744",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240c:c927:5966:cf38:54b9:8fb2:e99c:e8ef",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240e:2b3d:23b5:9e66:1ab2:7711:954:7b0c",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240a:ce1e:7597:999d:e1e9:f404:5ee4:eeb7",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240e:3632:ef7b:1186:1fc6:38cc:23a9:3fca",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "2408:84cd:805c:dda7:d21:3eb8:3459:b768",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "2408:8e9f:3679:ae19:4aa0:1eba:221a:e82b",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "2401:afa0:b75a:be85:c921:2072:c6e7:2469",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240e:591:276:6c03:4742:fa91:ba94:3973",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240e:7d8:1d06:8126:4f48:6be2:a234:cc59",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240e:200:8218:80c9:262c:5b3c:187:50b0",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "2408:4206:3e80:afde:7024:6976:643b:4ee5",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "240c:832c:917d:232d:daf7:ebf:13b0:804",
+  "stratum": "other-cn"
+ },
+ {
+  "ip": "2a09:bac5:25c0::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2001:470:fcce:862::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c40c:f448::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c420:f5d5::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c410:f441::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c414:f495::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a09:bac1:19c0:8d10::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c404:f4d8::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c41c:f47d::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a09:bac3:1ee8::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2606:54c3:0:c53::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c404:f520::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2409:2003::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c408:f563::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c414:f483::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a09:bac1:19e0:18::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c410:f476::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2406:e500:2501:84::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c40c:f4a9::",
+  "stratum": "geolite-city"
+ },
+ {
+  "ip": "2a02:26f7:c40c:f59a::",
+  "stratum": "geolite-city"
+ }
+]
