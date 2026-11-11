@@ -12,18 +12,18 @@ GeoLite2-City 为基线，叠加纯真 qqwry 的中国大陆 IPv4 城市数据�
 非官方增强版，与 MaxMind 没有隶属或背书关系；使用时须按 GeoLite2
 许可署名 MaxMind。
 
-## 部署（umami）
+## 部署
 
 1. 下载 Release 里的 `GeoLite2-City-CN.mmdb`（61.8 MB，SHA256 见
-   `SHA256SUMS`），放到 umami 服务器上。
-2. 把 umami 配置里 GeoLite2-City.mmdb 的路径改成这个文件，重启
-   umami。不用改源码。
+   `SHA256SUMS`）。
+2. 把软件里 GeoLite2-City.mmdb 的路径改成这个文件，重启服务。不
+   用改源码。
 
-任何能读 MaxMind City 格式的软件都能用，不只 umami。
+任何能读 MaxMind City 格式的软件都能用（umami、nginx geoip2 等）。
 
 ## 字段
 
-umami 只读这几个字段：`country` 是 `country.iso_code`（大陆为
+常用字段：`country` 是 `country.iso_code`（大陆为
 `CN`）；`region` 是 `subdivisions[0].iso_code`，不带国家前缀
 （广东 `GD`、北京 `BJ`）；`city` 是 `city.names.en`（英文/拼音；
 中文名在 `names.zh-CN` 里备用）。`database_type` 是
