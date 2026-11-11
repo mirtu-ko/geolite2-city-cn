@@ -43,7 +43,7 @@ umami 只读这几个字段：`country` 是 `country.iso_code`（大陆为
 
 ## 自动更新（GitHub Actions）
 
-`.github/workflows/build.yml`：每周一 03:00 UTC 自动跑 `build.sh`，
+`.github/workflows/build.yml`：每月 1 日 03:00 UTC 自动跑 `build.sh`，
 成品（mmdb、conflicts.csv、README、SHA256SUMS）发为带日期标签的
 Release。改构建脚本后推送到 main 会先跑一次构建验证（只传
 Artifact，不发版）；也可以在 Actions 页手动触发。
